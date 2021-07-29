@@ -21,8 +21,9 @@ mat-sidenav {
     margin-left: 32px;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: baseline;
+    padding: 15px;
 
     font-size: 2rem;
     color: lightgray;
@@ -38,6 +39,10 @@ mat-sidenav-container {
     align-items: center;
     justify-content: flex-start;
     font-size: 1rem;
+
+    mat-icon {
+        margin-right: 8px;
+    }
 }
 
 .avatar {
@@ -62,4 +67,8 @@ mat-divider {
     margin-top: 16px;
     margin-bottom: 16px;
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.custom-select {
+    align-items: baseline;
 }
