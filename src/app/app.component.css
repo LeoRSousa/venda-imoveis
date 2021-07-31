@@ -14,18 +14,41 @@ mat-sidenav {
     text-align: center;
 }
 
+h1 {
+    text-align: center;
+    color: lightgray;
+}
+
+.cards {
+    margin-left: 100px;
+    display: flex;
+}
+
+.corr-geral {
+    margin-left: 80px;
+    padding: 50px;
+}
+
+.corr-contra {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    width: calc(100vh / 2);
+    background-color: rgb(175, 175, 175);
+}
+
 .content {
     height: calc(100vh - 98px);
     border-radius: 10px;
     margin: 16px;
     margin-left: 32px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+    padding: 10px;
 
-    font-size: 2rem;
-    color: lightgray;
+    color: black;
 }
 
 mat-sidenav-container {

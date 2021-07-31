@@ -1,4 +1,4 @@
-<!-- https://youtu.be/fk4eIoy1l_M?t=469 P/ navegação--> 
+<!-- https://youtu.be/fk4eIoy1l_M?t=469 P/ navegação-->
 <mat-toolbar class="mat-elevation-z8">
     <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
         <mat-icon *ngIf="!sidenav.opened">
@@ -54,7 +54,46 @@
 
     <mat-sidenav-content>
         <div class="content mat-elevation-z8">
-            <h1>CORRETORES</h1>
+            <h1>CADASTRO DE CORRETORES</h1>
+            <!-- Parte geral -->
+            <div class="corr-geral">
+                <p>
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" required>
+                </p>
+                <p>
+                    <label for="creci">CRECI: </label>
+                    <input type="number" name="creci" required>
+                </p>
+            </div>
+
+            <div class="cards">
+                <!-- Card 1 -->
+                <div class="corr-contra">
+                    <p>
+                        <label for="sal">Salario: </label>
+                        <input type="number" name="sal">
+                    </p>
+                    <p>
+                        <label for="admissao">Admissão: </label>
+                        <input type="date" name="admissao">
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="corr-contra">
+                    <p>
+                        <label for="comissao">Porcentual de comissao: </label>
+                        <input type="number" name="comissao">
+                    </p>
+                </div>
+            </div>
+
+            <form>
+                <div>
+                    <label for=""></label>
+                </div>
+            </form>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
