@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-corretores',
   templateUrl: './corretores.component.html',
-  styleUrls: ['./corretores.component.css']
+  styleUrls: ['../../app.component.css']
 })
 export class CorretoresComponent implements OnInit {
 

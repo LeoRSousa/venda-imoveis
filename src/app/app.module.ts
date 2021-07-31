@@ -18,14 +18,15 @@ import { HomeComponent } from './pages/home/home.component';
 import { MasterComponent } from './pages/master/master.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
   {
     path: '',
-    component: MasterComponent,
+    component: AppComponent,
     children: [
       { path: 'home', component: HomeComponent },
-      { path: 'corretores', component: CorretoresComponent },
+      { path: 'corretores', component: CorretoresComponent }
     ]
-  },
+  }
 ];
 
 @NgModule({
