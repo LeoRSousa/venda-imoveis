@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,9 @@ export class AppComponent {
   ]
 
   tipo = '';
+  visualizar() {
+    console.log(this.tipo);
+  }
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;

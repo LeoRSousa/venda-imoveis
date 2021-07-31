@@ -38,18 +38,24 @@
         <mat-divider></mat-divider>
 
         <button mat-button class="menu-button">
-            <mat-icon>help</mat-icon>
-            <span>Help</span>
+            <a href="mailto:leorsousa@unifei.edu.br">
+                <mat-icon>help</mat-icon>
+                <span>Help</span>
+            </a>
         </button>
 
     </mat-sidenav>
     <mat-sidenav-content>
         <div class="content mat-elevation-z8">
             <!-- Select do tipo de imóvel -->
-            <select class="custom-select" name="tipo">
+            <select class="custom-select" name="tipo" [ngModel]="tipo">
                 <!-- [(ngModel)]="tipo" -->
                 <option *ngFor="let elem of imoveisTipo"> {{ elem }} </option>
             </select>
+            <button (click)="visualizar()"></button>
+            <div class="galeria" *ngIf="tipo == 'casa'">
+                <p>AAAAAAAAAAAAAAA</p>
+            </div>
 
             <!-- Galeria de imóveis do tipo -->
             <!-- Exemplo de if: <tr *ngIf="exibir>0" colspan="6"></tr> -->
