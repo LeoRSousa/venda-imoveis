@@ -1,0 +1,19 @@
+<p>home works!</p>
+
+<mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+        <!-- Select do tipo de imóvel -->
+        <select class="custom-select" name="tipo" [ngModel]="tipo">
+            <!-- [(ngModel)]="tipo" -->
+            <option *ngFor="let elem of imoveisTipo"> {{ elem }} </option>
+        </select>
+        <button (click)="visualizar()"></button>
+        <div class="galeria" *ngIf="tipo == 'casa'">
+            <p>AAAAAAAAAAAAAAA</p>
+        </div>
+
+        <!-- Galeria de imóveis do tipo -->
+        <!-- Exemplo de if: <tr *ngIf="exibir>0" colspan="6"></tr> -->
+
+    </div>
+</mat-sidenav-content>

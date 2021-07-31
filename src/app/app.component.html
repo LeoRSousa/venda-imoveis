@@ -1,3 +1,4 @@
+<!-- https://youtu.be/fk4eIoy1l_M?t=469 P/ navegação--> 
 <mat-toolbar class="mat-elevation-z8">
     <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
         <mat-icon *ngIf="!sidenav.opened">
@@ -15,12 +16,16 @@
     <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
 
         <button mat-button class="menu-button">
-            <mat-icon>home</mat-icon>
-            <span>Imóveis</span>
+            <a routerLink="/home">
+                <mat-icon>home</mat-icon>
+                <span>Imóveis</span>
+            </a>
         </button>
         <button mat-button class="menu-button">
-            <mat-icon>person</mat-icon>
-            <span>Corretores</span>
+            <a routerLink="/corretores">
+                <mat-icon>person</mat-icon>
+                <span>Corretores</span>
+            </a>
         </button>
         <button mat-button class="menu-button">
             <mat-icon>shopping_cart</mat-icon>
@@ -45,20 +50,9 @@
         </button>
 
     </mat-sidenav>
+
     <mat-sidenav-content>
         <div class="content mat-elevation-z8">
-            <!-- Select do tipo de imóvel -->
-            <select class="custom-select" name="tipo" [ngModel]="tipo">
-                <!-- [(ngModel)]="tipo" -->
-                <option *ngFor="let elem of imoveisTipo"> {{ elem }} </option>
-            </select>
-            <button (click)="visualizar()"></button>
-            <div class="galeria" *ngIf="tipo == 'casa'">
-                <p>AAAAAAAAAAAAAAA</p>
-            </div>
-
-            <!-- Galeria de imóveis do tipo -->
-            <!-- Exemplo de if: <tr *ngIf="exibir>0" colspan="6"></tr> -->
 
         </div>
     </mat-sidenav-content>

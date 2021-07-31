@@ -9,21 +9,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
-  imoveisTipo = [
-    'casa', 
-    'apartamento', 
-    'sala comercial', 
-    'lote', 
-    'chácara', 
-    'sítio',
-    'fazenda',
-  ]
-
-  tipo = '';
-  visualizar() {
-    console.log(this.tipo);
-  }
+  title = 'venda-imoveis';
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
