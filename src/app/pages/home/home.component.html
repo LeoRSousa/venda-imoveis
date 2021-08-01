@@ -1,4 +1,5 @@
-<!-- https://youtu.be/fk4eIoy1l_M?t=469 P/ navegação--> 
+<!-- https://youtu.be/fk4eIoy1l_M?t=469 P/ navegação-->
+<!-- Mat Icons: https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/ -->
 <mat-toolbar class="mat-elevation-z8">
     <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
         <mat-icon *ngIf="!sidenav.opened">
@@ -57,30 +58,31 @@
             <h1>HOME</h1>
             <div class="busca">
                 <label>Tipo de imóvel: </label>
-                <select name="filtro" >
+                <select name="filtro">
                     <option *ngFor="let imovel of imoveisTipo"> {{ imovel }} </option>
                 </select>
                 <button (click)="showMessage()">Buscar</button>
             </div>
-            <div class="galeria">
-                <img 
-                (click)="showMessage()"
-                src="https://blog.friasneto.com.br/wp-content/uploads/2020/07/piracicaba-casa-condominio-residencial-terras-de-artemis-artemis-23-11-2019_11-02-08-0.jpg" 
-                alt="Casa1"
-                height="150px"
-                >
-
-                <img 
-                (click)="showMessage()"
-                src="https://blog.friasneto.com.br/wp-content/uploads/2020/07/piracicaba-casa-condominio-residencial-terras-de-artemis-artemis-23-11-2019_11-02-08-0.jpg" 
-                alt="Casa1"
-                height="150px">
-
-                <img 
-                (click)="showMessage()"
-                src="https://blog.friasneto.com.br/wp-content/uploads/2020/07/piracicaba-casa-condominio-residencial-terras-de-artemis-artemis-23-11-2019_11-02-08-0.jpg" 
-                alt="Casa1"
-                height="150px">
+            <!-- Se não tiver elementos, não exibe -->
+            <div class="galeria" *ngIf="imoveisLista.length > 0">
+                <div class="imovel-card" *ngFor="let elem of imoveisLista">
+                    
+                    <img 
+                        [src]="elem.imagem"
+                        (click)="showMessage()"
+                        alt="Casa1" height="150px" 
+                    />
+                    <div class="card-texto">
+                        Cod.: {{ elem.codigo }} <br>
+                        {{ elem.descricao }} <br>
+                        R$ {{ elem.preco }}
+                    </div>
+                    <div class="icones" >
+                        <div (click)="editar(elem.codigo)"><mat-icon class="edit-icon">edit</mat-icon>Editar</div>
+                        <div (click)="deletar(elem.codigo)"><mat-icon class="delete-icon" (click)="showMessage()">delete</mat-icon>Deletar</div>
+                    </div>
+                </div>
+                <!-- <br> -->
             </div>
         </div>
     </mat-sidenav-content>
