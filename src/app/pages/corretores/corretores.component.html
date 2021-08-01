@@ -59,41 +59,74 @@
             <div class="corr-geral">
                 <p>
                     <label for="nome">Nome: </label>
-                    <input type="text" name="nome" required>
+                    <input type="text" name="nome" required [(ngModel)]="nome">
                 </p>
                 <p>
                     <label for="creci">CRECI: </label>
-                    <input type="number" name="creci" required>
+                    <input type="number" name="creci" required [(ngModel)]="creci">
                 </p>
             </div>
 
             <div class="cards">
                 <!-- Card 1 -->
                 <div class="corr-contra">
+                    <h3>Contratado</h3>
                     <p>
                         <label for="sal">Salario: </label>
-                        <input type="number" name="sal">
+                        <input type="number" name="sal" [(ngModel)]="salario">
                     </p>
                     <p>
                         <label for="admissao">Admissão: </label>
-                        <input type="date" name="admissao">
+                        <input type="date" name="admissao" [(ngModel)]="admissao">
                     </p>
+                    <button class="cadastro" (click)="cadastrarContratado()"><b>Cadastrar</b></button>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="corr-contra">
+                    <h3>Comissonado</h3>
                     <p>
                         <label for="comissao">Porcentual de comissao: </label>
-                        <input type="number" name="comissao">
+                        <input type="number" name="comissao" [(ngModel)]="comissao">
                     </p>
+                    <button class="cadastro" (click)="cadastrarComissionado()"><b>Cadastrar</b></button>
                 </div>
             </div>
 
-            <form>
-                <div>
-                    <label for=""></label>
-                </div>
-            </form>
+            <!-- Ver os corretores || TEMPORÁRIO -->
+            <div class="tabela-corretores">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CRECI</th>
+                            <th>Salario</th>
+                            <th>Admissão</th>
+                        </tr>
+                    </thead>
+                    <tr *ngFor="let i of contratadosLista">
+                        <td>{{ i.nome }}</td>
+                        <td>{{ i.creci }}</td>
+                        <td>{{ i.salario }}</td>
+                        <td>{{ i.admissao }}</td>
+                    </tr>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CRECI</th>
+                            <th>Comissão</th>
+                        </tr>
+                    </thead>
+                    <tr *ngFor="let i of comissionadosLista">
+                        <td>{{ i.nome }}</td>
+                        <td>{{ i.creci }}</td>
+                        <td>{{ i.comissao }}</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

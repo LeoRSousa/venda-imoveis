@@ -19,34 +19,59 @@ h1 {
     color: lightgray;
 }
 
-.cards {
-    margin-left: 100px;
+h3 {
+    text-align: center;
+    text-shadow: 2px 2px 2px grey;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.cadastro {
+    width: 30%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    margin-top: 3em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .corr-geral {
-    margin-left: 80px;
-    padding: 50px;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .corr-contra {
-    margin: 20px;
+    margin-left: 10px;
     padding: 10px;
     border-radius: 8px;
     width: calc(100vh / 2);
+    height: 10em;
     background-color: rgb(175, 175, 175);
+    align-items: center;
 }
 
 .content {
     height: calc(100vh - 98px);
     border-radius: 10px;
-    margin: 16px;
-    margin-left: 32px;
+    /* margin: 16px;
+    margin-left: 32px; */
 
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: flex-start; */
+    height:90%;
     padding: 10px;
+
+    align-items: center;
 
     color: black;
 }

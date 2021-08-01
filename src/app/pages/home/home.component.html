@@ -55,12 +55,33 @@
     <mat-sidenav-content>
         <div class="content mat-elevation-z8">
             <h1>HOME</h1>
-            <p class="galeria">
+            <div class="busca">
+                <label>Tipo de imóvel: </label>
+                <select name="filtro" >
+                    <option *ngFor="let imovel of imoveisTipo"> {{ imovel }} </option>
+                </select>
+                <button (click)="showMessage()">Buscar</button>
+            </div>
+            <div class="galeria">
                 <img 
+                (click)="showMessage()"
+                src="https://blog.friasneto.com.br/wp-content/uploads/2020/07/piracicaba-casa-condominio-residencial-terras-de-artemis-artemis-23-11-2019_11-02-08-0.jpg" 
+                alt="Casa1"
+                height="150px"
+                >
+
+                <img 
+                (click)="showMessage()"
                 src="https://blog.friasneto.com.br/wp-content/uploads/2020/07/piracicaba-casa-condominio-residencial-terras-de-artemis-artemis-23-11-2019_11-02-08-0.jpg" 
                 alt="Casa1"
                 height="150px">
-            </p>
+
+                <img 
+                (click)="showMessage()"
+                src="https://blog.friasneto.com.br/wp-content/uploads/2020/07/piracicaba-casa-condominio-residencial-terras-de-artemis-artemis-23-11-2019_11-02-08-0.jpg" 
+                alt="Casa1"
+                height="150px">
+            </div>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
