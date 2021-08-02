@@ -79,7 +79,7 @@
                         <label for="admissao">Admissão: </label>
                         <input type="date" name="admissao" [(ngModel)]="admissao">
                     </p>
-                    <button class="cadastro" (click)="cadastrarContratado()"><b>Cadastrar</b></button>
+                    <button class="cadastro" (click)="cadastrarContratado()"><b>Cadastrar/Editar</b></button>
                 </div>
 
                 <!-- Card 2 -->
@@ -89,12 +89,12 @@
                         <label for="comissao">Porcentual de comissao: </label>
                         <input type="number" name="comissao" [(ngModel)]="comissao">
                     </p>
-                    <button class="cadastro" (click)="cadastrarComissionado()"><b>Cadastrar</b></button>
+                    <button class="cadastro" (click)="cadastrarComissionado()"><b>Cadastrar/Editar</b></button>
                 </div>
             </div>
 
             <!-- Ver os corretores || TEMPORÁRIO -->
-            <div class="tabela-corretores">
+            <!-- <div class="tabela-corretores">
                 <table>
                     <thead>
                         <tr>
@@ -126,7 +126,7 @@
                         <td>{{ i.comissao }}</td>
                     </tr>
                 </table>
-            </div>
+            </div> -->
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
